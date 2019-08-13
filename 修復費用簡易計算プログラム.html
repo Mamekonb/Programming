@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <head>
-  <h3>水損公文書修復費用簡易計算</h3>
+  <h3>水損公文書修復費用簡易計算サイト</h3>
 	<style>
 		form {
   /* フォームをページの中央に置く */
@@ -20,7 +20,7 @@ document_vol,page_mater.label {
   /* すべてのラベルを同じサイズにして、きちんと揃える */
   display: inline-block;
   width: 220px;
-  text-align: right;
+  text-align:right;
 }
 ​
 input, textarea {
@@ -75,7 +75,7 @@ button {
     <legend>求める修復状態</legend>
     <p>
 	<font size="3" ></font>
-      <input type="radio" name="size" id="size_1" value="small" />
+      <input type="radio" name="method" id="method_1" value="natural" />
       <label for="size_1">自然乾燥</label>
 	<ul>
 		  <li>”保存”が目的である</li>
@@ -84,7 +84,7 @@ button {
 	</ul>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium" />
+      <input type="radio" name="method" id="method_2" value="washing" />
       <label for="size_2">文書洗浄</label>
 	<ul>
 		  <li>ある程度きれいな状態での保存を希望する</li>
@@ -93,6 +93,7 @@ button {
 	</ul>
     </p>
   </fieldset>
+  <br>
 <div class="button">
   <button type="submit">費用を計算する！</button>
 </div>
