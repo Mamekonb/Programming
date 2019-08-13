@@ -1,3 +1,99 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<h3>水損公文書修復費用簡易計算</h3>
-<h1>こんにちは</h1>
+<head>
+  <h3>水損公文書修復費用簡易計算</h3>
+	<style>
+		form {
+  /* フォームをページの中央に置く */
+  margin: 0 auto;
+  width: 800px;
+  /* フォームの範囲がわかるようにする */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+​
+form div + div {
+  margin-top: 1em;
+}
+​
+document_vol,page_mater.label {
+  /* すべてのラベルを同じサイズにして、きちんと揃える */
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}
+​
+input, textarea {
+  /* すべてのテキストフィールドのフォント設定を一致させる
+     デフォルトで、textarea は等幅フォントが設定されている */
+  font: 1em sans-serif;
+​
+  /* すべてのテキストフィールドを同じサイズにする */
+  width: 300px;
+  box-sizing: border-box;
+​
+  /* テキストフィールドのボーダーの外見を同一にする */
+  border: 1px solid #999;
+}
+​
+input:focus, textarea:focus {
+  /* アクティブな要素を少し強調する */
+  border-color: #000;
+}
+​
+textarea {
+  /* 複数行のテキストフィールドをラベルにきちんと揃える */
+  vertical-align: top;
+​
+  /* テキスト入力に十分な領域を与える */
+  height: 5em;
+}
+​
+.button {
+  /* ボタンを他のテキストフィールドと同じ場所に置く */
+  margin: 0 auto;
+  padding-left: 90px; /* label 要素と同じサイズ */
+}
+​
+button {
+  /* このマージンは、ラベルとテキストフィールドの間のスペースと
+     おおよそ同じスペースを表す */
+  margin-left: .5em;
+}
+	</style>
+</head>
+<form>
+	<div>
+    <label for="document">水損資料数:</label>
+    <input type="text" id="document" name="document_vol">
+	</div>
+	<div>
+    <label for="page">資料すべてを並べた時の厚さ:</label>
+    <input type="text" id="page" name="page_mater">
+	</div>
+  <fieldset>
+    <legend>求める修復状態</legend>
+    <p>
+	<font size="3" ></font>
+      <input type="radio" name="size" id="size_1" value="small" />
+      <label for="size_1">自然乾燥</label>
+	<ul>
+		  <li>”保存”が目的である</li>
+		  <li>文字の認識ができないものがあってもいい</li>
+		  <li>文書がそこまで泥や砂にまみれていない</li>
+	</ul>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium" />
+      <label for="size_2">文書洗浄</label>
+	<ul>
+		  <li>ある程度きれいな状態での保存を希望する</li>
+		  <li>頻繁に利用する資料である</li>
+		  <li>文書が汚泥にまみれている</li>
+	</ul>
+    </p>
+  </fieldset>
+<div class="button">
+  <button type="submit">費用を計算する！</button>
+</div>
+</form>
