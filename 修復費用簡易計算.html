@@ -1,0 +1,80 @@
+<html lang="ja">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
+<title>水損公文書修復費用簡易計算サイト</title>
+<meta charset="utf-8"
+  <script src="test.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+  <h1>水損公文書修復費用簡易計算サイト</h1>
+  <br>
+  <!-- テキストボックスを配置 -->
+  <form id="form1" action="#">
+    <p>
+      <!-- 水損史料の冊数を入力するテキストボックスを用意 -->
+    <label for="doc_num">水損史料冊数：</label>
+    <input type="text" id="doc_num" value>冊<br>
+      <!-- 水損史料の厚さを入力するテキストボックスを用意 -->
+    <label for="doc_mater">被害文書全てを並べた時の厚さ：</label>
+    <input type="text" id="doc_mater" value>m<br><br>
+    </form>
+              <!-- 修復状態を選択するラジオボタンを配置 -->
+    <form id="form2">
+    <legend>求める修復状態</legend>
+    <p>
+    <font size="3" ></font>
+      <input type="radio" name="method" id="method_1" value="自然乾燥" />
+      <label for="size_1">自然乾燥</label>
+    <ul>
+      <li>”保存”が目的である</li>
+      <li>文字の認識ができないものがあってもいい</li>
+      <li>文書がそこまで泥や砂にまみれていない</li>
+    </ul>
+    </p>
+    <p>
+      <input type="radio" name="method" id="method_2" value="文書洗浄" />
+      <label for="size_2">文書洗浄</label>
+    <ul>
+      <li>ある程度きれいな状態での保存を希望する</li>
+      <li>頻繁に利用する資料である</li>
+      <li>文書が汚泥にまみれている</li>
+    </ul>
+    </p>
+    <p><input type="button" onclick="func1()" value="費用を計算する!"></p>
+  </form>
+        <!-- 結果の表示 -->
+  <div id="method_massage"></div>
+  <div id="output_message"></div>
+          <!-- javascriptで値を取得して処理 -->
+  <script language="javascript" type="text/javascript">
+  function func1() {
+    var doc_num = document.getElementById("doc_num").value;
+    var doc_mater = document.getElementById("doc_mater").value;
+    if (doc_num === "" || doc_mater === ""){
+    output_message = "エラー：全ての値を入力してください。";
+    document.getElementById("output_message").innerHTML = output_message;
+    }else{
+    output_message = "史料1冊あたりの厚さは平均"+doc_mater/doc_num*100+"cmです。修復冊数は" + doc_num * 5000 + "円です。";
+    document.getElementById("output_message").innerHTML = output_message;
+    }
+    // form要素を取得
+var element = document.getElementById( "form2" ) ;
+// form要素内のラジオボタングループ(name="hoge")を取得
+var radioNodeList = element.method ;
+// 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
+var a = radioNodeList.value ;
+if ( a === "" ) {
+	// 未選択状態
+    method_massage = "エラー：修復方法を選択してください。";
+    document.getElementById("method_massage").innerHTML = method_massage;
+} else {
+	// aには選択状態の値が代入されている
+	  method_massage = a;
+    document.getElementById("method_massage").innerHTML = "選択した修復方法は"+method_massage.bold()+"です。";
+}
+  }
+  </script>
+</body>
+</html>
