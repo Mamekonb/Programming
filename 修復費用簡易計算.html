@@ -3,30 +3,33 @@
 <head>
 <title>水損公文書修復費用簡易計算サイト</title>
 <meta charset="utf-8"
-  <script src="test.js"></script>
+  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
   <style>
   </style>
 </head>
 <body>
+  <script type="text/javascript" src="js/main.js"></script>
   <h1>水損公文書修復費用簡易計算サイト</h1>
   <br>
   <!-- テキストボックスを配置 -->
   <form id="form1" action="#">
     <p>
       <!-- 水損史料の冊数を入力するテキストボックスを用意 -->
-    <label for="doc_num">水損史料冊数：</label>
+    <label for="doc_num">＊水損史料冊数：</label>
     <input type="text" id="doc_num" value>冊<br>
       <!-- 水損史料の厚さを入力するテキストボックスを用意 -->
-    <label for="doc_mater">被害文書全てを並べた時の厚さ：</label>
+    <label for="doc_mater">＊被害文書全てを並べた時の厚さ：</label>
     <input type="text" id="doc_mater" value>m<br><br>
     </form>
               <!-- 修復状態を選択するラジオボタンを配置 -->
     <form id="form2">
-    <legend>求める修復状態</legend>
+    <legend>＊求める修復状態＊</legend>
     <p>
     <font size="3" ></font>
       <input type="radio" name="method" id="method_1" value="自然乾燥" />
-      <label for="size_1">自然乾燥</label>
+      <label for="size_1">自然乾燥</label><br>
+      修復状態サンプル：自然乾燥された文書
+      <br><img src="/Users/yumeko/Documents/programming/自然乾燥.png"><!-- 相対URL -->
     <ul>
       <li>”保存”が目的である</li>
       <li>文字の認識ができないものがあってもいい</li>
@@ -35,7 +38,9 @@
     </p>
     <p>
       <input type="radio" name="method" id="method_2" value="文書洗浄" />
-      <label for="size_2">文書洗浄</label>
+      <label for="size_2">文書洗浄</label><br>
+      修復状態サンプル：フローティングボード法・エアストリーム法により洗浄した文書
+      <br><img src="/Users/yumeko/Documents/programming/文書洗浄.png"><!-- 相対URL -->
     <ul>
       <li>ある程度きれいな状態での保存を希望する</li>
       <li>頻繁に利用する資料である</li>
