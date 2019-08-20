@@ -1,16 +1,15 @@
-<html lang="ja">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<!DOCTYPE html>
 <head>
-<title>水損公文書修復費用簡易計算サイト</title>
-<meta charset="utf-8"
-  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-  <style>
-  </style>
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="syuhuku.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <title>水損公文書修復費用簡易計算サイト</title>
 </head>
+
 <body>
-  <script type="text/javascript" src="js/main.js"></script>
-  <h1>水損公文書修復費用簡易計算サイト</h1>
-  <br>
+  <div class="header"><h1>水損公文書修復費用簡易計算サイト</h1></div>
+
+  <div class="main">
   <!-- テキストボックスを配置 -->
   <form id="form1" action="#">
     <p>
@@ -47,39 +46,7 @@
       <li>文書が汚泥にまみれている</li>
     </ul>
     </p>
-    <p><input type="button" onclick="func1()" value="費用を計算する!"></p>
-  </form>
-        <!-- 結果の表示 -->
-  <div id="method_massage"></div>
-  <div id="output_message"></div>
-          <!-- javascriptで値を取得して処理 -->
-  <script language="javascript" type="text/javascript">
-  function func1() {
-    var doc_num = document.getElementById("doc_num").value;
-    var doc_mater = document.getElementById("doc_mater").value;
-    if (doc_num === "" || doc_mater === ""){
-    output_message = "エラー：全ての値を入力してください。";
-    document.getElementById("output_message").innerHTML = output_message;
-    }else{
-    output_message = "史料1冊あたりの厚さは平均"+doc_mater/doc_num*100+"cmです。修復冊数は" + doc_num * 5000 + "円です。";
-    document.getElementById("output_message").innerHTML = output_message;
-    }
-    // form要素を取得
-var element = document.getElementById( "form2" ) ;
-// form要素内のラジオボタングループ(name="hoge")を取得
-var radioNodeList = element.method ;
-// 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
-var a = radioNodeList.value ;
-if ( a === "" ) {
-	// 未選択状態
-    method_massage = "エラー：修復方法を選択してください。";
-    document.getElementById("method_massage").innerHTML = method_massage;
-} else {
-	// aには選択状態の値が代入されている
-	  method_massage = a;
-    document.getElementById("method_massage").innerHTML = "選択した修復方法は"+method_massage.bold()+"です。";
-}
-  }
-  </script>
+</div>
+<button onclick="location.href='file:///Users/yumeko/Documents/Programming/sucsess.html'">費用を計算する！</button>
 </body>
 </html>
