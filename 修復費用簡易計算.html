@@ -11,22 +11,23 @@
 
   <div class="main">
   <!-- テキストボックスを配置 -->
-  <form id="form1" action="#">
-    <p>
+  <form class="form1" action="file:///Users/yumeko/Documents/Programming/success.html" method="post">
+    <div class=num_form>
       <!-- 水損史料の冊数を入力するテキストボックスを用意 -->
-    <label for="doc_num">＊水損史料冊数：</label>
-    <input type="text" id="doc_num" value>冊<br>
+    <label for="doc_num"><p class="textbox">＊水損史料冊数：</p></label>
+    <input type="text" id="doc_num">冊<br>
       <!-- 水損史料の厚さを入力するテキストボックスを用意 -->
-    <label for="doc_mater">＊被害文書全てを並べた時の厚さ：</label>
-    <input type="text" id="doc_mater" value>m<br><br>
+
+    <label for="doc_mater"><p class="textbox">＊被害文書を全て並べた時の厚さ：</p></label>
+    <input type="text" id="doc_mater">m<br>
+    </div>
     </form>
               <!-- 修復状態を選択するラジオボタンを配置 -->
+    <div>
     <form id="form2">
     <legend>＊求める修復状態＊</legend>
-    <p>
-    <font size="3" ></font>
-      <input type="radio" name="method" id="method_1" value="自然乾燥" />
-      <label for="size_1">自然乾燥</label><br>
+      <input type="radio" name="method" id="method_1" value="自然乾燥" class="radio" />
+      <label for="size_1" >自然乾燥</label><br>
       修復状態サンプル：自然乾燥された文書
       <br><img src="/Users/yumeko/Documents/programming/自然乾燥.png"><!-- 相対URL -->
     <ul>
@@ -34,9 +35,8 @@
       <li>文字の認識ができないものがあってもいい</li>
       <li>文書がそこまで泥や砂にまみれていない</li>
     </ul>
-    </p>
     <p>
-      <input type="radio" name="method" id="method_2" value="文書洗浄" />
+      <input type="radio" name="method" id="method_2" value="文書洗浄" class="radio" />
       <label for="size_2">文書洗浄</label><br>
       修復状態サンプル：フローティングボード法・エアストリーム法により洗浄した文書
       <br><img src="/Users/yumeko/Documents/programming/文書洗浄.png"><!-- 相対URL -->
@@ -47,6 +47,6 @@
     </ul>
     </p>
 </div>
-<button onclick="location.href='file:///Users/yumeko/Documents/Programming/sucsess.html'">費用を計算する！</button>
+<button type="submit" name="button" onclick="location.href='file:///Users/yumeko/Documents/Programming/success.html'">費用を計算する！</button>
 </body>
 </html>
