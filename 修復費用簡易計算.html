@@ -3,50 +3,65 @@
 <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="syuhuku.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <title>水損公文書修復費用簡易計算サイト</title>
+  <title>水損公文書修復費用簡易計算フォーム</title>
 </head>
 
 <body>
-  <div class="header"><h1>水損公文書修復費用簡易計算サイト</h1></div>
+  <!-- ヘッダー開始 -->
+  <div class ="headerbg">
+  <div class = "header">水損公文書修復費用簡易計算フォーム</div>
+  </div>
+  <!-- ヘッダー終了 -->
 
+  <!-- フォーム部分開始 -->
   <div class="main">
+
   <!-- テキストボックスを配置 -->
-  <form class="form1" action="file:///Users/yumeko/Documents/Programming/success.html" method="post">
-    <div class=num_form>
+  <form class="form1" action="file://global.hitachi.net/GUVPCRootY$/GUJPVP200194084-71562403/MyDocument/デスクトップ/success.html" method="post">
+    <div class="num_form"><br>
       <!-- 水損史料の冊数を入力するテキストボックスを用意 -->
     <label for="doc_num"><p class="textbox">＊水損史料冊数：</p></label>
-    <input type="text" id="doc_num">冊<br>
+    <input type="tel" id="doc_num" name="doc_num">冊<br>
       <!-- 水損史料の厚さを入力するテキストボックスを用意 -->
 
     <label for="doc_mater"><p class="textbox">＊被害文書を全て並べた時の厚さ：</p></label>
-    <input type="text" id="doc_mater">m<br>
+    <input type="tel" id="doc_mater" name="doc_mater">m<br>
     </div>
     </form>
-              <!-- 修復状態を選択するラジオボタンを配置 -->
-    <div>
+    <!-- 終了 -->
+
+    <!-- 修復状態を選択するラジオボタンを配置 -->
+
     <form id="form2">
-    <legend>＊求める修復状態＊</legend>
+    <p class="state">＊求める修復状態</p>
       <input type="radio" name="method" id="method_1" value="自然乾燥" class="radio" />
       <label for="size_1" >自然乾燥</label><br>
-      修復状態サンプル：自然乾燥された文書
-      <br><img src="/Users/yumeko/Documents/programming/自然乾燥.png"><!-- 相対URL -->
-    <ul>
-      <li>”保存”が目的である</li>
-      <li>文字の認識ができないものがあってもいい</li>
-      <li>文書がそこまで泥や砂にまみれていない</li>
-    </ul>
-    <p>
+      <br><img src="/Users/yumeko/Documents/programming/自然乾燥.png" alt="自然乾燥された文書"><br><!-- 相対URL -->
+      修復状態サンプル写真：自然乾燥された文書<br><br>
+      ◆”保存”が目的である<br>
+      ◆文字の認識ができないものがあってもいい<br>
+      ◆文書がそこまで泥や砂にまみれていない<br>
+
       <input type="radio" name="method" id="method_2" value="文書洗浄" class="radio" />
       <label for="size_2">文書洗浄</label><br>
-      修復状態サンプル：フローティングボード法・エアストリーム法により洗浄した文書
-      <br><img src="/Users/yumeko/Documents/programming/文書洗浄.png"><!-- 相対URL -->
-    <ul>
-      <li>ある程度きれいな状態での保存を希望する</li>
-      <li>頻繁に利用する資料である</li>
-      <li>文書が汚泥にまみれている</li>
-    </ul>
-    </p>
+      <br><img src="/Users/yumeko/Documents/programming/文書洗浄.png" alt="フローティングボード法・エアストリーム法により洗浄された文書"><br><!-- 相対URL -->
+      修復状態サンプル写真：フローティングボード法・<br>エアストリーム法により洗浄された文書<br><br>
+      ◆ある程度きれいな状態での保存を希望する<br>
+      ◆頻繁に利用する資料である<br>
+      ◆文書が汚泥にまみれている<br><br>
+
+    </form>
+    <!-- ラジオボタン終了 -->
+
+<!--<div><button type="submit" name="button" formaction="location.href='file://global.hitachi.net/GUVPCRootY$/GUJPVP200194084-71562403/MyDocument/デスクトップ/success.html'">費用を計算する</button></div><br>-->
+<div><button type="submit" name="button" onclick="location.href='file:\\global.hitachi.net\GUVPCRootY$\GUJPVP200194084-71562403\MyDocument\デスクトップ\success.html'">費用を計算する</button></div><br>
+
 </div>
-<button type="submit" name="button" onclick="location.href='file:///Users/yumeko/Documents/Programming/success.html'">費用を計算する！</button>
+<!-- フォーム部分終了 -->
+
+<!-- フッター開始 -->
+<div class="footer">
+</div>
+<!-- フッター終了 -->
 </body>
 </html>
