@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <head>
-<meta charset="utf-8">
+<meta charset="shift-JIS">
 <link rel="stylesheet" type="text/css" href="result.css">
-<title>結果表示-水損公文書修復費用簡易計算</title>
+<title>計算結果-水損公文書修復費用簡易計算フォーム</title>
 </head>
 
 <body>
-  <div class="header"><h1>計算結果</h1></div>
-  <p>遷移成功！</p>
+   <!-- ヘッダー開始 -->
+   <div class ="headerbg">
+   <div class="header">計算結果</div>
+   </div>
+   <!-- ヘッダー終了 -->
+
+  <!-- 結果表示部分開始 -->
   <div class="main">
-    <table>
-    <tr><td>物品名</td><td>個数</td><td>おおよその値段(円)</td></tr>
-    <tr><td>キッチンペーパー</td><td>個数</td><td>110</td></tr>
-    <tr><td>段ボール</td><td>個数</td><td>110</td></tr>
-  	<tr><td>ビニールテープ</td><td>個数</td><td>110</td></tr>
-  	<tr><td>メッシュコンテナ</td><td>個数</td><td>110</td></tr>
-  	<tr><td>合計</td></tr>
-    </table>
-  </div>
-<button onclick="location.href='file:///Users/yumeko/Documents/Programming/修復費用簡易計算.html'">もう一度計算する</button>
+
+   <br><p>遷移成功！</p>
+
+   <?php echo $_POST['doc_num']; ?>
+   <?php echo $_POST['doc_mater']; ?>
+
+   <div class="main">
+    <table border="1" align="center">
+<caption>明細表（自然乾燥の場合）</caption><br>
+	<tr><th></th><th>物品名</th><th>個数</th><th>おおよその値段</th></tr>
+	<tr><th>1</th><td>キッチンペーパー</td><td></td><td></td></tr>
+	<tr><th>2</th><td>段ボール</td><td></td><td></td></tr>
+	<tr><th>3</th><td>ビニール紐</td><td></td><td></td></tr>
+	<tr><th>4</th><td>メッシュコンテナ</td><td></td><td></td></tr>
+</table>
+<br>
+<table border="1" align="center">
+<caption>明細表（文書洗浄の場合）</caption><br>
+	<tr><th></th><th>物品名</th><th>個数</th><th>おおよその値段</th></tr>
+	<tr><th>1</th><td>バット</td><td></td><td></td></tr>
+	<tr><th>2</th><td>プラスティックボード</td><td></td><td></td></tr>
+	<tr><th>3</th><td>張替用網戸</td><td></td><td></td></tr>
+	<tr><th>4</th><td>刷毛</td><td></td><td></td></tr>
+	<tr><th>5</th><td>吸水タオル</td><td></td><td></td></tr>
+	<tr><th>6</th><td>不織布</td><td></td><td></td></tr>
+	<tr><th>7</th><td>濾紙</td><td></td><td></td></tr>
+	<tr><th>8</th><td>段ボール</td><td></td><td></td></tr>
+	<tr><th>8</th><td>重石</td><td></td><td></td></tr>
+	<tr><th>8</th><td>扇風機</td><td></td><td></td></tr>
+</table>
+  </div><br>
+
+  <!-- 計算フォームに戻るボタン -->
+<button onclick="location.href='file:///Users/yumeko/Documents/Programming/修復費用簡易計算.html'">もう一度計算する</button><br><br>
+
+	</div>
+	<!-- 結果表示部分終了 -->
+<div class="footer"></div>
 </body>
 </html>
