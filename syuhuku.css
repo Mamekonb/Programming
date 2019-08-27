@@ -1,38 +1,67 @@
 /* 修復費用計算styleseat */
-.header{
-background-color: #00bfff;
-color: #ffffff;
-text-align: center;
-}
+
 body {
   background-color: #e0ffff;
-  /* フォームをページの中央に置く */
-  margin: 0 auto;
-  width: 700px;
-  /* フォームの範囲がわかるようにする */
-  padding: 1em 3em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
-}
-.main{
-  text-align: center;
+  margin: 0px 0px 0px 0px;
+  min-width:700px;
 }
 
-label {
+.headerbg {
+background-image: url("treatment-03.jpg");
+background-color: #00000;
+background-repeat: no-repeat;
+background-size: cover;
+height: 200px;
+min-width: 700px;
+}
+
+.header{
+font-size: 40px;
+color: #000000;
+  -webkit-text-stroke: 0.4px #FFF;
+  text-stroke: 0.4px #FFF;
+text-align: center;
+line-height:200px;
+}
+
+.main{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 700px;
+  border: double 0.5px #000000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+
+}
+
   /* すべてのラベルを同じサイズにして、きちんと揃える */
+label {
   display: inline-block;
   width: 250px;
 }
+
 .textbox{
   width: 360px;
   text-align: left;
 }
-legend {
-  width: 360px;
-  display: inline-block;
-  padding-left: 42px
+
+#form2 {
+	width:450px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
 }
-.radio{
-  width: 140px;
-  display: center;
+
+ul{
+border: 1px solid #000000;
+list-style: none;
+text-align: left;
+}
+
+.footer {
+background-color: #4682B4;
+background-size: cover;
+height: 100px;
 }
