@@ -1,9 +1,60 @@
 /* 結果表示用styleseat */
-.header{
-background-color: #00bfff;
-color: #ffffff;
-text-align: center;
-}
+
+
 body{
-background-color: #e0ffff;
+  background-color: #e0ffff;
+  margin: 0px 0px 0px 0px;
+  min-width:700px;
+}
+
+.headerbg {
+background-color: #00bfff;
+background-repeat: no-repeat;
+background-size: cover;
+height: 200px;
+min-width: 700px;
+}
+
+.header{
+font-size: 40px;
+color: #000000;
+  -webkit-text-stroke: 0.5px #FFF;
+  text-stroke: 0.5px #FFF;
+text-align: center;
+line-height:200px;
+}
+
+
+.main{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+
+}
+
+table {
+   width: 700px;
+   border-collapse: collapse;
+	border-spacing: 0;
+   border: 2px solid blue; /* 外枠 */
+}
+table th, table td {
+   border-style: solid dotted;/* 線種 */
+   border-width: 2px; /* 線の太さ */
+   border-color: blue; /* 線色 */
+	padding: 10px 0;
+	text-align: center;
+}
+table tr:nth-child(odd){
+  background-color: skyblue;
+}
+
+.footer {
+background-color: #4682B4;
+background-size: cover;
+height: 100px;
 }
